@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "Konshu X Viewer",
+  "version": "2.0.0",
+  "description": "Adds follower count, account age, and based-in country under each username on X, and keeps your Topic snoozes from expiring.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "support@konshu.tv",
+      "strict_min_version": "109.0"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://x.com/*",
+        "*://twitter.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "interceptor.js"
+      ],
+      "matches": [
+        "*://x.com/*",
+        "*://twitter.com/*"
+      ]
+    }
+  ],
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Konshu X Viewer"
+  },
+  "author": "Konshu",
+  "homepage_url": "https://konshu.tv"
+}
