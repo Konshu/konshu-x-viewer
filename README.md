@@ -144,4 +144,4 @@ next renewal / stale).
 
 ## Support
 
-support@konshu.tv
+If its a notable issue bring it up on the github issues feature, thank you.
